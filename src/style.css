@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/Roboto/Roboto-Medium.ttf") format("truetype");
+  src: url("/src/Roboto/Roboto-Medium.ttf") format("truetype");
 }
 
 .topnav {
@@ -38,6 +38,10 @@
 
 .topnav .icon {
   display: none;
+}
+
+body {
+  font-family: "Roboto";
 }
 
 .title {
