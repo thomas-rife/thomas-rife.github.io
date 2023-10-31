@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
 .topnav {
   position: fixed;
   top: 0;
@@ -6,6 +11,7 @@
   height: 10%;
   background-color: #1c1c1c;
   overflow: hidden;
+  font-family: "Roboto";
 }
 
 .topnav a {
@@ -16,6 +22,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Roboto";
 }
 
 .topnav a:hover {
@@ -31,4 +38,12 @@
 
 .topnav .icon {
   display: none;
+}
+
+h1 {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
 }
