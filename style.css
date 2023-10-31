@@ -6,6 +6,7 @@
   height: 10%;
   background-color: #1c1c1c;
   overflow: hidden;
+  transition: 0.5s;
 }
 
 .topnav a {
