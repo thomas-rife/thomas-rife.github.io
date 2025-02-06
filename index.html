@@ -1,92 +1,34 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>Thomas' Portfolio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <div class="topnav">
-    <div class="title">Thomas Rife's Portfolio</div>
-    <a href="contact.html">Contact</a>
-    <a href="projects.html">Projects</a>
-    <a href="coursework.html">Coursework</a>
-    <a class="active" href="index.html">Home</a>
-  </div>
-  <body>
-    <h1 class="heading">Thomas Rife's Portfolio</h1>
-    <p>Hi, my name is Thomas Rife.</p>
-  </body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Be My Valentine?</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thomas-rife.github.io</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Landing Screen -->
-    <div id="landing" class="container">
-      <h1>huiiiii kacyyy</h1>
-      <p>continue on...</p>
-      <button id="start-btn" class="btn">continue</button>
-    </div>
-
-    <!-- Interactive Screen -->
-    <div id="interactive" class="container" style="display: none">
-      <div class="heart">&#10084;</div>
-      <h1>Huiiii Kacy</h1>
-      <p>Will you be my valentine??? Click below tehe</p>
-      <button id="valentine-btn" class="btn">Yes</button>
-    </div>
-
-    <!-- Final Screen -->
-    <div id="final" class="container" style="display: none">
-      <div class="heart">&#10084;</div>
-      <h1>yayyy you are my valentine</h1>
-      <p>so excited to see you in two weeks :D</p>
-    </div>
-
-    <!-- Include the canvas-confetti library -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
-    <!-- Custom Script -->
-    <script>
-      // Get references to the containers and buttons
-      const landingContainer = document.getElementById("landing");
-      const interactiveContainer = document.getElementById("interactive");
-      const finalContainer = document.getElementById("final");
-      const startBtn = document.getElementById("start-btn");
-      const valentineBtn = document.getElementById("valentine-btn");
-
-      // When the start button is clicked, show the interactive screen.
-      startBtn.addEventListener("click", function () {
-        landingContainer.style.display = "none";
-        interactiveContainer.style.display = "block";
-      });
-
-      // Interactive screen: require multiple clicks before showing the final message.
-      let clickCount = 0;
-      const requiredClicks = 10; // Adjust this value as desired
-
-      valentineBtn.addEventListener("click", function () {
-        clickCount++;
-        if (clickCount >= requiredClicks) {
-          // Trigger confetti
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-          });
-          // Transition to the final screen after reaching the required clicks
-          interactiveContainer.style.display = "none";
-          finalContainer.style.display = "block";
-        } else {
-          // Optionally update the button text to show progress
-          valentineBtn.innerText = `teheeee keep clicking (${clickCount}/${requiredClicks})`;
-        }
-      });
-    </script>
+    <header class="navbar">
+      <!-- <a href="#" class="logo">Apple</a> -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="intro">
+      <div class="intro-content">
+        <h1 class="head">Hello, I'm Thomas Rife</h1>
+        <p class="bio">Welcome to my portfolio website</p>
+        <div class="social-links">
+          <a href="https://github.com/thomas-rife" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/thomasrife" target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,148 +1,86 @@
-/* @font-face {
-  font-family: "Roboto";
-  src: url("./Roboto/Roboto-Medium.ttf") format("truetype");
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SF-Pro-Text-Thin.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.heading {
-  padding-top: 1.7em;
-  font-family: "Roboto";
-  font-size: 2em;
-  padding-left: 0.8em;
-}
-
-body {
-  font-family: "Roboto";
-}
-
-p {
-  font-family: "Roboto";
-  padding-left: 0.8em;
-}
-
-.topnav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3.5em;
-  background-color: #ffc0cb;
-  font-family: "Roboto";
-  justify-content: flex-end;
-}
-
-.topnav .title {
-  float: left;
-  margin-top: 0.65em;
-  margin-left: 1em;
-  color: #f2f2f2;
-  font-size: 1.4em;
-}
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1.4em;
-  font-family: "Roboto";
-  transition: 0.3s;
-  justify-content: space-between;
-}
-
-.topnav a:hover {
-  background-color: #e3e3e3;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #e3e3e3;
-  color: black;
-}
-
-.topnav .icon {
-  display: none;
-} */
-
-/* Reset default styles */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Apply a cute, soft gradient background to the page */
-body {
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(30, 30, 30, 0.95); /* Slightly transparent white */
+  /* border-bottom: 1px solid #e5e5e5; */
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+  padding: 0 20px;
+  z-index: 1000;
 }
 
-/* Style for each container (landing, interactive, final) */
-.container {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-}
-
-/* Heart icon styling with a beating animation */
-.heart {
-  font-size: 4rem;
-  color: #e74c3c;
-  animation: beat 1.5s infinite;
-  margin-bottom: 1rem;
-}
-
-/* Heading styling */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* Paragraph styling */
-p {
+/* Logo Styles */
+.navbar .logo {
+  font-family: "SF Pro Display", sans-serif;
   font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
 }
 
-/* Button styling */
-.btn {
-  background-color: #e74c3c;
-  border: none;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Navigation Links Container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
-.btn:hover {
-  background-color: #c0392b;
+/* Individual Link Styles */
+.nav-links li {
+  display: flex;
 }
 
-/* Keyframes for the heart beating animation */
-@keyframes beat {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+.nav-links li a {
+  text-decoration: none;
+  font-family: "SF Pro Display";
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 8px 10px;
+  transition: background-color 0.5s, border-radius 0.5s;
+}
+
+/* Hover Effects */
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.intro-content {
+  font-family: "SF Pro Display";
+  padding-top: 60px;
+  padding-left: 20px;
+}
+
+.head {
+  font-family: "SF Pro Display";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.bio {
+  font-family: "SF Pro Display";
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding-top: 10px;
 }
