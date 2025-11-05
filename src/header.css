@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Custom SF Pro";
+  src: url("../fonts/SF-Pro-Text-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255); /* Slightly transparent white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual Link Styles */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: "Custom SF Pro";
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.95);
+  padding: 8px 10px;
+  transition: background-color 0.5s, border-radius 0.5s;
+}
+
+/* Hover Effects */
+.nav-links li a:hover {
+  border-radius: 4px;
+}
+
+/* Dropdown Parent */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  position: fixed;
+  top: 40px; /* Changed from 0 to 40px so it sits below the navbar */
+  left: 0;
+  width: 100vw;
+  padding: 20px 0 10px; /* Adjusted top padding to complement the new top value */
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  z-index: 1100;
+  pointer-events: none;
+  list-style: none;
+}
+
+/* Show the dropdown when hovering over the trigger or dropdown content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: visible;
+}
+
+.dropdown-content li {
+  white-space: nowrap;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1.5rem;
+  margin-left: 40px;
+  font-weight: bold;
+  text-align: left;
+}

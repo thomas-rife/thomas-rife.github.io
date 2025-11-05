@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Custom SF Pro";
+  src: url("/fonts/SF-Pro-Text-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Basic Reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Intro Section */
+.intro {
+  padding: 2rem;
+  /* background-color: #f8f8f8; Optional background color */
+  /* height: 100vh; */
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px; /* or whatever size looks right */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 5px 10px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Intro Text Styling */
+.intro-statement {
+  font-family: "Custom SF Pro";
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro-body {
+  font-family: "Custom SF Pro";
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.95);
+  margin-top: 50px;
+}
+
+.feature {
+  font-family: "Custom SF Pro";
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 3rem clamp(16px, 6vw, 80px);
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.95);
+  margin-top: 15px;
+}
+
+.feature-img {
+  width: clamp(120px, 30vw, 260px);
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.feature-link {
+  font-size: 0.9rem;
+}
+
+.feature-text p {
+  font-family: "Custom SF Pro";
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* Layout primitives */
+:root {
+  --container: min(1100px, 92vw);
+  --space-1: clamp(8px, 1.6vw, 18px);
+  --space-2: clamp(16px, 3vw, 28px);
+  --space-3: clamp(24px, 4vw, 48px);
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: "Custom SF Pro";
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-3) 0;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+/* Work grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section.work {
+  padding-top: var(--space-1); /* was var(--space-3) via .section */
+}
+
+.intro {
+  padding-bottom: var(--space-1); /* was 2rem total padding */
+}
+.card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  padding: var(--space-2);
+}
+.card-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.card-body p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Experience list */
+.xp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.xp-list li {
+  display: grid;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.xp-list li > span {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  min-height: 28px;
+}
+
+.experience .xp-list {
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
+}
+.xp-role,
+.xp-org,
+.xp-time {
+  line-height: 1.2;
+}
+
+.xp-role {
+  font-weight: 600;
+}
+
+.xp-org {
+  opacity: 0.8;
+}
+
+.xp-time {
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 700px) {
+  .xp-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+/* Writing */
+.notes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.notes a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
+}
+
+.notes a:hover {
+  opacity: 0.8;
+}
+
+/* About */
+.about-body {
+  max-width: 90ch;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* CTA */
+.cta {
+  padding-bottom: calc(var(--space-3) * 1.5);
+}
+
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-2);
+}
+
+.cta-box h3 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .cta-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button {
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  /* padding: 20px; */
+  /* background: #f5f5f5; */
+  /* color: #777; */
+  font-size: 0.9rem;
+  /* margin-top: 40px; */
+  font-family: "Custom SF Pro";
+  color: #333;
+  padding-bottom: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 1.5rem;
+}
+
+footer a:visited {
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

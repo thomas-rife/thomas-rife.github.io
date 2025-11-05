@@ -4,59 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thomas Rife</title>
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="/src/header.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="navbar">
-      <!-- <a href="#" class="logo">Apple</a> -->
+    <!-- <header class="navbar">
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="#">Experience</a>
+            <a href="src/experience/experience.html">Experience</a>
             <ul class="dropdown-content">
-              <li><a href="#">HYEL</a></li>
-              <li><a href="#">NREIP</a></li>
+              <li><a href="src/experience/hyel.html">HYEL</a></li>
+              <li><a href="src/experience/nreip2024.html">NREIP</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#">Portfolio</a>
+            <a href="src/portfolio/portfolio.html">Portfolio</a>
             <ul class="dropdown-content">
-              <li><a href="#">MultiLangFunctions</a></li>
-              <li><a href="#">PANIC</a></li>
-              <li><a href="#">GitGrit</a></li>
-              <li><a href="#">React Reflections</a></li>
+              <li><a href="src/portfolio/python.html">Python</a></li>
+              <li><a href="src/portfolio/swift.html">Swift</a></li>
+              <li><a href="src/portfolio/javascript.html">JavaScript</a></li>
+              <li><a href="src/portfolio/react.html">React.js</a></li>
+              <li><a href="src/portfolio/html-css.html">HTML/CSS</a></li>
             </ul>
           </li>
-          <li><a href="#">About</a></li>
+          <li><a href="src/about/about.html">About</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <section class="intro">
-      <div class="intro-content">
-        <img
-          src="https://avatars.githubusercontent.com/u/77445907?v=4"
-          alt="Thomas Rife"
-          class="profile-img"
-        />
-        <div class="intro-text">
-          <h1>Hello, I'm Thomas Rife</h1>
-          <p>
-            I am a current Junior at Loyola Marymount University studying
-            Computer Science. I am passionate about utilizing technology to make
-            the world a better place.
-          </p>
-        </div>
+      <img src="./assets/profile.jpeg" alt="Thomas Rife" class="profile-img" />
+      <!-- <h1 class="intro-statement">
+        I work on human-centered interfaces for learning and accessibility.
+      </h1> -->
+      <p class="intro-body">
+        I work on human-centered interfaces for learning and accessibility
+      </p>
+    </section>
+    <!-- <section class="feature">
+      <img src="/assets/seeingreality.PNG" alt="" class="feature-img" />
+      <div class="feature-text">
+        <h2>Seeing Reality</h2>
+        <p>
+          iOS accessibility tool for low vision users. OCR, speech, zoom
+          control.
+        </p>
+        <a href="#" class="feature-link">View Project</a>
       </div>
-      <div class="social-links">
-        <a href="https://github.com/thomas-rife" target="_blank">
-          <img src="https://img.icons8.com/ios/50/000000/github.png" />
+    </section> -->
+    <!-- Selected Work -->
+    <section class="section container work">
+      <h2 class="section-title">Selected work</h2>
+      <div class="work-grid">
+        <a class="card" href="#" aria-label="Seeing Reality">
+          <img src="/assets/seeingreality.PNG" alt="" />
+          <div class="card-body">
+            <h3>Seeing Reality</h3>
+            <p>iOS accessibility app with OCR, speech, and zoom.</p>
+          </div>
         </a>
 
-        <a href="https://linkedin.com/in/thomasrife" target="_blank">
-          <img src="https://img.icons8.com/ios/50/000000/linkedin.png" />
+        <a class="card" href="#" aria-label="Knowledge Grapht">
+          <img src="/assets/knowledge-grapht.png" alt="" />
+          <div class="card-body">
+            <h3>Knowledge Grapht</h3>
+            <p>Next.js classroom tools for adaptive study.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/src/experience/hyel.html" aria-label="HYEL Game">
+          <img src="/assets/hyel.png" alt="" />
+          <div class="card-body">
+            <h3>HYEL SwiftUI game</h3>
+            <p>SwiftUI gameplay, motion, and App Store release.</p>
+          </div>
         </a>
       </div>
     </section>
+
+    <!-- Experience -->
+    <section class="section container experience">
+      <h2 class="section-title">Experience</h2>
+      <ul class="xp-list">
+        <li>
+          <span class="xp-role">Technical Mentor, Mixed Reality</span>
+          <span class="xp-org">Google Code Next</span>
+          <span class="xp-time">Sept. 2025 – present</span>
+        </li>
+        <li>
+          <span class="xp-role">Quantum ML Intern</span>
+          <span class="xp-org">NREIP</span>
+          <span class="xp-time">Summer 2025</span>
+        </li>
+        <li>
+          <span class="xp-role">iOS Design Engineer Intern</span>
+          <span class="xp-org">HYEL</span>
+          <span class="xp-time">2024–2025</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Writing / Notes -->
+    <!-- <section class="section container writing">
+      <h2 class="section-title">Writing</h2>
+      <ul class="notes">
+        <li><a href="#">Designing motion that serves comprehension</a></li>
+        <li><a href="#">SwiftUI layout patterns for adaptive cards</a></li>
+        <li><a href="#">What a knowledge graph should feel like</a></li>
+      </ul>
+    </section> -->
+
+    <!-- About -->
+    <section class="section container about">
+      <h2 class="section-title">About</h2>
+      <p class="about-body">
+        I build human-centered interfaces for learning and accessibility. Recent
+        work spans SwiftUI for iOS and Next.js for the web, with a focus on
+        clarity and intuitive design.
+      </p>
+    </section>
+
+    <!-- Contact CTA -->
+    <!-- <section class="section container cta">
+      <div class="cta-box">
+        <h3>Let’s build thoughtful tools</h3>
+        <a class="button" href="mailto:trife@lion.lmu.edu">Email me</a>
+      </div>
+    </section> -->
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/thomas-rife" target="_blank"
+          >github
+          <!-- <img src="https://img.icons8.com/ios/50/000000/github.png" /> -->
+        </a>
+
+        <a href="https://linkedin.com/in/thomasrife" target="_blank"
+          >linkedin
+          <!-- <img src="https://img.icons8.com/ios/50/000000/linkedin.png" /> -->
+        </a>
+      </div>
+      <p>&copy; 2025 Thomas Rife. All rights reserved.</p>
+    </footer>
   </body>
 </html>
