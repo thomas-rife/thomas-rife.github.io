@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seeing Reality — iOS Accessibility App</title>
+    <link rel="stylesheet" href="/src/header.css" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <section class="section container" style="padding-top: var(--space-1)">
+      <a
+        href="/index.html"
+        class="button"
+        style="padding: 6px 10px; border-radius: 8px"
+        >Back</a
+      >
+    </section>
+    <section class="intro">
+      <img
+        src="/assets/logo.png"
+        alt="Seeing Reality app preview"
+        class="profile-img"
+      />
+      <p class="intro-body">
+        iOS accessibility app that helps low-vision users read and navigate on
+        device with clarity and speed
+      </p>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p style="margin: 0">
+            Seeing Reality is a Swift and SwiftUI app designed for people with
+            visual impairments. It combines zoom functionality, on-device OCR,
+            and high quality text to speech to make printed and on screen
+            content easier to read. I led the design and iOS build with a focus
+            on low cognitive load, large tap targets, and VoiceOver
+            compatibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">What I built</h2>
+      <div class="card">
+        <div class="card-body">
+          <ul style="margin: 0; padding-left: 1.1rem">
+            <li>
+              SwiftUI interface with single purpose screens, oversized controls,
+              and clear visual hierarchy
+            </li>
+            <li>
+              Live magnifier with pinch and tap zoom, torch control, and
+              contrast presets for common reading scenarios
+            </li>
+            <li>
+              On-device OCR using Vision to capture text, then AVFoundation to
+              read it aloud with adjustable rate and voice
+            </li>
+            <li>
+              Offline first workflow that keeps OCR and speech functional
+              without a network connection
+            </li>
+            <li>
+              VoiceOver labels, Dynamic Type, and color contrast checks aligned
+              with Apple HIG and WCAG guidance
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Tech stack</h2>
+      <div class="card">
+        <div class="card-body">
+          <ul style="margin: 0; padding-left: 1.1rem">
+            <li><strong>SwiftUI</strong> for layout, state, and adaptive UI</li>
+            <li>
+              <strong>Vision</strong> for OCR text detection and recognition
+            </li>
+            <li>
+              <strong>AVFoundation</strong> for speech synthesis and audio
+              session control
+            </li>
+            <li>
+              <strong>UIKit bridges</strong> where needed for camera capture
+              configuration
+            </li>
+            <li>
+              Accessibility APIs for VoiceOver, Dynamic Type, and reduce motion
+              settings
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Key features</h2>
+
+      <!-- One big picture of the menu -->
+      <figure class="card hero-card">
+        <img
+          src="/assets/seeingreality.png"
+          alt="Seeing Reality home screen with large buttons for Zoom Camera, Text to Speech, Navigation, Settings, and About"
+          class="card-img-tall"
+        />
+        <figcaption class="hero-caption">
+          Large touch targets and clear icons, optimized for one-hand reach and
+          VoiceOver.
+        </figcaption>
+      </figure>
+
+      <!-- Emphasize TTS and spoken navigation -->
+      <div class="card">
+        <div class="card-body">
+          <ul style="margin: 0; padding-left: 1.1rem">
+            <li>
+              Large buttons, high contrast, generous spacing for low-vision use
+            </li>
+            <li>Text to Speech, on-device OCR, quick repeat</li>
+            <li>
+              Navigation with spoken directions, haptics for confirmations,
+              simple cancel
+            </li>
+            <li>
+              Works offline for OCR and speech, respects Dynamic Type and reduce
+              motion
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Outcomes</h2>
+      <div class="card">
+        <div class="card-body">
+          <ul style="margin: 0; padding-left: 1.1rem">
+            <li>
+              Prototype tested with educators and low-vision users to validate
+              control size and reading flow
+            </li>
+            <li>
+              Improved legibility and speed to first audio playback through
+              simplified capture and read flow
+            </li>
+            <li>
+              Documented patterns for future accessibility projects across
+              magnification, OCR, and speech
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Links</h2>
+      <div class="card">
+        <div class="card-body">
+          <ul style="margin: 0; padding-left: 1.1rem">
+            <li>
+              <a
+                href="https://projectseeingreality.weebly.com"
+                target="_blank"
+                rel="noopener"
+                >Project archive</a
+              >
+            </li>
+            <!-- <li><a href="/">Back to portfolio</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/thomas-rife" target="_blank">github</a>
+        <a href="https://linkedin.com/in/thomasrife" target="_blank"
+          >linkedin</a
+        >
+      </div>
+      <p>&copy; 2025 Thomas Rife. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -285,6 +285,39 @@ body {
   }
 }
 
+/* Big hero image for feature showcase */
+.hero-card {
+  background: #fff;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: block;
+  overflow: hidden; /* keep shadows/corners clean */
+  border-radius: var(--radius); /* match other cards */
+}
+
+.card-img-tall {
+  display: block;
+  margin: 40px auto; /* centers horizontally */
+  width: 100%;
+  max-width: 650px; /* adjust to taste */
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.hero-caption {
+  margin-bottom: 45px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Override the generic .card img height for tall hero screenshots */
+.card img.card-img-tall {
+  height: clamp(320px, 65vh, 820px);
+  object-fit: contain;
+}
+
 footer {
   text-align: center;
   /* padding: 20px; */
